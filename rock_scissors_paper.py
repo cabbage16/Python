@@ -3,17 +3,10 @@ import random
 victory = 0
 defeat = 0
 draw = 0
+rcs = ('가위', '바위', '보')
 while True:
     player = (input("가위,바위,보 중 하나를 입력하세요.(종료하려면 break를 입력하세요.)"))
-    computer  = random.randint(0,2)
-    if computer ==0:
-        computer = '가위'
-
-    elif computer == 1:
-        computer = '바위'
-
-    else:
-        computer = '보'
+    computer  = random.choice(rcs)
 
     if player == '가위' or player == '바위' or player == '보':
         if player == computer:
